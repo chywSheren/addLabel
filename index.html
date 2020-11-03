@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery自定义标签输入插件Tagator</title>
+
+
+<style>
+body{font-family:sans-serif;margin:0;padding:0;}
+
+#wrapper{width:600px;margin:100px auto;}
+.inputTagator{width:400px;border: 1px solid #abadb3;border-radius:3px;box-sizing: border-box;background-color:#fff;display:inline-block;outline:none;}
+.operateBtn{padding:6px;}
+</style>
+
+<!-- autocomplete 必要样式 -->
+<link type="text/css" rel="stylesheet" href="css/fm.tagator.jquery.css"/>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/fm.tagator.jquery.js"></script>
+<script type="text/javascript">
+$(function () {
+
+	$('#inputTagator').tagator({
+		autocomplete: ['素材', '素材一', '素材二', '素材三', '素材四', '素材五', '素材六', '素材七', '素材八',]
+	});
+	
+	$('#getvalue').click(function () {
+		alert($("#inputTagator").val());
+	});
+});
+</script>
+
+</head>
+<body>
+
+<p align="center">提示：文本框输入”素材“查看效果</p>
+
+<div id="wrapper">
+	<input id="inputTagator" name="inputTagator" value="素材,JS代码" class="inputTagator">
+</div>
+
+</body>
+</html>
